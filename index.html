@@ -234,7 +234,7 @@
               
                 
                 <a class="post-title-link" href="/2016/05/20/新帖子/" itemprop="url">
-                  新帖子
+                  惊鸿Android SDK集成说明文档
                 </a>
               
             
@@ -277,7 +277,46 @@
       
         
           
-            
+            <h1 id="集成文档"><a href="#集成文档" class="headerlink" title="集成文档"></a>集成文档</h1><h2 id="1-集成准备"><a href="#1-集成准备" class="headerlink" title="1.集成准备"></a>1.集成准备</h2><h3 id="1-1-获得Appkey"><a href="#1-1-获得Appkey" class="headerlink" title="1.1 获得Appkey"></a>1.1 获得Appkey</h3><h3 id="1-2-下载SDK"><a href="#1-2-下载SDK" class="headerlink" title="1.2 下载SDK"></a>1.2 下载SDK</h3><h3 id="1-3-导入SDK"><a href="#1-3-导入SDK" class="headerlink" title="1.3 导入SDK"></a>1.3 导入SDK</h3><h4 id="1-3-1-Eclipse项目导入"><a href="#1-3-1-Eclipse项目导入" class="headerlink" title="1.3.1 Eclipse项目导入"></a>1.3.1 Eclipse项目导入</h4><h4 id="1-3-2-Android-Studio项目导入"><a href="#1-3-2-Android-Studio项目导入" class="headerlink" title="1.3.2 Android Studio项目导入"></a>1.3.2 Android Studio项目导入</h4><h2 id="2-基本功能集成"><a href="#2-基本功能集成" class="headerlink" title="2.基本功能集成"></a>2.基本功能集成</h2><h3 id="2-1-配置AppKey"><a href="#2-1-配置AppKey" class="headerlink" title="2.1 配置AppKey"></a>2.1 配置AppKey</h3><h4 id="2-1-1-manifest配置Appkey"><a href="#2-1-1-manifest配置Appkey" class="headerlink" title="2.1.1 manifest配置Appkey"></a>2.1.1 manifest配置Appkey</h4><h4 id="2-1-2-权限说明"><a href="#2-1-2-权限说明" class="headerlink" title="2.1.2 权限说明"></a>2.1.2 权限说明</h4><table>
+<thead>
+<tr>
+<th>权限</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACCESS_NETWORK_STATE(必须)</td>
+<td>检测联网方式，区分用户设备使用的是2G、3G或是WiFi</td>
+</tr>
+<tr>
+<td>READ_PHONE_STATE(必须)</td>
+<td>获取用户设备的IMEI，通过IMEI和mac来唯一的标识用户。</td>
+</tr>
+<tr>
+<td>ACCESS_WIFI_STATE(必须)</td>
+<td>获取用户设备的mac地址，在平板设备上，无法通过imei标示设备，我们会将mac地址作为用户的唯一标识。</td>
+</tr>
+<tr>
+<td>INTERNET(必须)</td>
+<td>允许应用程序联网，以便向我们的服务器端发送数据。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-1-3-填写appkey"><a href="#2-1-3-填写appkey" class="headerlink" title="2.1.3 填写appkey"></a>2.1.3 填写appkey</h4><p>将appkey替换成后台申请的appkey<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta-data android:value=&quot;appkey&quot; android:name=&quot;JH_APPKEY&quot;&gt;&lt;/meta-data&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-1-4-channel填写"><a href="#2-1-4-channel填写" class="headerlink" title="2.1.4 channel填写"></a>2.1.4 channel填写</h4><p>将channel替换为渠道名称，渠道名称自定义，如：wandoujia 不建议使用中文。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta-data android:value=&quot;channel&quot; android:name=&quot;JH_APPKEY&quot;&gt;&lt;/meta-data&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-1-5-推送id填写"><a href="#2-1-5-推送id填写" class="headerlink" title="2.1.5 推送id填写"></a>2.1.5 推送id填写</h4><p>将pushid替换为应用使用的推送id<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta-data android:value=&quot;pushid&quot; android:name=&quot;JH_PUSHID&quot;/&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-1-6-version标识"><a href="#2-1-6-version标识" class="headerlink" title="2.1.6 version标识"></a>2.1.6 version标识</h4><p>以SDk打包时的VersionName作为应用程序的版本标识。</p>
+<h3 id="2-2-Session统计"><a href="#2-2-Session统计" class="headerlink" title="2.2 Session统计"></a>2.2 Session统计</h3><h4 id="2-2-1-应用启动统计"><a href="#2-2-1-应用启动统计" class="headerlink" title="2.2.1 应用启动统计"></a>2.2.1 应用启动统计</h4><h4 id="2-2-2-应用结束统计"><a href="#2-2-2-应用结束统计" class="headerlink" title="2.2.2 应用结束统计"></a>2.2.2 应用结束统计</h4><h4 id="2-2-3-页面启动统计"><a href="#2-2-3-页面启动统计" class="headerlink" title="2.2.3 页面启动统计"></a>2.2.3 页面启动统计</h4><p>在每个Activity界面的onResume方法中调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JHEventAgent.onResume(this);</span><br></pre></td></tr></table></figure></p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void onResume() &#123;</span><br><span class="line">	JHEventAgent.onResume(this);</span><br><span class="line">	super.onResume();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2-4-页面结束统计"><a href="#2-2-4-页面结束统计" class="headerlink" title="2.2.4 页面结束统计"></a>2.2.4 页面结束统计</h4><p>在每个Activity界面的onPause方法中调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JHEventAgent.onPause(this);</span><br></pre></td></tr></table></figure></p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void onPause() &#123;</span><br><span class="line">	JHEventAgent.onPause(this);</span><br><span class="line">	super.onPause();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2-5-包涵Fragment的页面统计"><a href="#2-2-5-包涵Fragment的页面统计" class="headerlink" title="2.2.5 包涵Fragment的页面统计"></a>2.2.5 包涵Fragment的页面统计</h4><p>在Fragment所在的Activity中使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void onResume() &#123;</span><br><span class="line">	JHEventAgent.onResume(this);</span><br><span class="line">	super.onResume();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">protected void onPause() &#123;</span><br><span class="line">	JHEventAgent.onPause(this);</span><br><span class="line">	super.onPause();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在Fragment中使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public void onResume() &#123;</span><br><span class="line">    super.onResume();</span><br><span class="line">    JHEventAgent.onPageStart(this,&quot;MainScreen&quot;); </span><br><span class="line">&#125;</span><br><span class="line">public void onPause() &#123;</span><br><span class="line">    super.onPause();</span><br><span class="line">    JHEventAgent.onPageEnd(this,&quot;MainScreen&quot;); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-3-发送策略"><a href="#2-3-发送策略" class="headerlink" title="2.3 发送策略"></a>2.3 发送策略</h3><h3 id="2-3-1-应用启动发送"><a href="#2-3-1-应用启动发送" class="headerlink" title="2.3.1 应用启动发送"></a>2.3.1 应用启动发送</h3><h3 id="2-3-2-按时间间隔发送"><a href="#2-3-2-按时间间隔发送" class="headerlink" title="2.3.2 按时间间隔发送"></a>2.3.2 按时间间隔发送</h3><h3 id="2-4-日志加密设置"><a href="#2-4-日志加密设置" class="headerlink" title="2.4 日志加密设置"></a>2.4 日志加密设置</h3><h3 id="2-5-代码混淆"><a href="#2-5-代码混淆" class="headerlink" title="2.5 代码混淆"></a>2.5 代码混淆</h3><h2 id="3-自定义事件"><a href="#3-自定义事件" class="headerlink" title="3. 自定义事件"></a>3. 自定义事件</h2><h3 id="3-1-自定义事件设置"><a href="#3-1-自定义事件设置" class="headerlink" title="3.1 自定义事件设置"></a>3.1 自定义事件设置</h3><h3 id="3-2-统计事件发生次数"><a href="#3-2-统计事件发生次数" class="headerlink" title="3.2 统计事件发生次数"></a>3.2 统计事件发生次数</h3><p>eventId为后台设置的事件id<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JHEventAgent.onEvent(this, &quot;eventId&quot;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-3-为事件绑定属性"><a href="#3-3-为事件绑定属性" class="headerlink" title="3.3 为事件绑定属性"></a>3.3 为事件绑定属性</h3><p>eventId对应的属性在后台设置，map的key为属性id<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; hashMap = new HashMap&lt;String, String&gt;();</span><br><span class="line">hashMap.put(&quot;name&quot;, &quot;jh&quot;);</span><br><span class="line">hashMap.put(&quot;age&quot;, &quot;18&quot;);</span><br><span class="line">JHEventAgent.onEvent(this, &quot;eventId&quot;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-4-计算事件"><a href="#3-4-计算事件" class="headerlink" title="3.4 计算事件"></a>3.4 计算事件</h3><p>100为事件的数值，如播放时长、数量、级别等<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; hashMap = new HashMap&lt;String, String&gt;();</span><br><span class="line">hashMap.put(&quot;name&quot;, &quot;jh&quot;);</span><br><span class="line">hashMap.put(&quot;age&quot;, &quot;18&quot;);</span><br><span class="line">JHEventAgent.onEvent(this, &quot;eventId&quot;, hashMap, 100);</span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -455,6 +494,13 @@
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
