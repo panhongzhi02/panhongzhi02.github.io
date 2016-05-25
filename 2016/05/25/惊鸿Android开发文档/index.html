@@ -84,16 +84,169 @@
 
 
 
-<meta name="description" content="记录工作中使用到的技术">
+<meta name="description" content="1. 服务参数说明1.1 Param类
+
+
+字段名
+说明
+
+
+
+
+datatype
+应用id即appkey
+
+
+os
+操作系统名称版本
+
+
+vr
+应用程序版本号
+
+
+pb
+应用推广渠道名称
+
+
+userkey
+用户唯一标识 优先imei其次mac
+
+
+ua
+设备名称
+
+
+pushid
+第三方推送工具识别id
+
+
+session
+用户操作行为信息
+
+
+
+Session类
+
+
+字段名
+说明
+
+
+
+
+o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="惊鸿Android开发文档">
 <meta property="og:url" content="http://yoursite.com/2016/05/25/惊鸿Android开发文档/index.html">
 <meta property="og:site_name" content="潘宏智">
-<meta property="og:description" content="记录工作中使用到的技术">
-<meta property="og:updated_time" content="2016-05-25T12:53:30.858Z">
+<meta property="og:description" content="1. 服务参数说明1.1 Param类
+
+
+字段名
+说明
+
+
+
+
+datatype
+应用id即appkey
+
+
+os
+操作系统名称版本
+
+
+vr
+应用程序版本号
+
+
+pb
+应用推广渠道名称
+
+
+userkey
+用户唯一标识 优先imei其次mac
+
+
+ua
+设备名称
+
+
+pushid
+第三方推送工具识别id
+
+
+session
+用户操作行为信息
+
+
+
+Session类
+
+
+字段名
+说明
+
+
+
+
+o">
+<meta property="og:updated_time" content="2016-05-25T12:57:30.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="惊鸿Android开发文档">
-<meta name="twitter:description" content="记录工作中使用到的技术">
+<meta name="twitter:description" content="1. 服务参数说明1.1 Param类
+
+
+字段名
+说明
+
+
+
+
+datatype
+应用id即appkey
+
+
+os
+操作系统名称版本
+
+
+vr
+应用程序版本号
+
+
+pb
+应用推广渠道名称
+
+
+userkey
+用户唯一标识 优先imei其次mac
+
+
+ua
+设备名称
+
+
+pushid
+第三方推送工具识别id
+
+
+session
+用户操作行为信息
+
+
+
+Session类
+
+
+字段名
+说明
+
+
+
+
+o">
 
 
 
@@ -278,7 +431,102 @@
       
 
       
-        
+        <h2 id="1-服务参数说明"><a href="#1-服务参数说明" class="headerlink" title="1. 服务参数说明"></a>1. 服务参数说明</h2><h3 id="1-1-Param类"><a href="#1-1-Param类" class="headerlink" title="1.1 Param类"></a>1.1 Param类</h3><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>datatype</td>
+<td>应用id即appkey</td>
+</tr>
+<tr>
+<td>os</td>
+<td>操作系统名称版本</td>
+</tr>
+<tr>
+<td>vr</td>
+<td>应用程序版本号</td>
+</tr>
+<tr>
+<td>pb</td>
+<td>应用推广渠道名称</td>
+</tr>
+<tr>
+<td>userkey</td>
+<td>用户唯一标识 优先imei其次mac</td>
+</tr>
+<tr>
+<td>ua</td>
+<td>设备名称</td>
+</tr>
+<tr>
+<td>pushid</td>
+<td>第三方推送工具识别id</td>
+</tr>
+<tr>
+<td>session</td>
+<td>用户操作行为信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Session类"><a href="#Session类" class="headerlink" title="Session类"></a>Session类</h4><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>opTime</td>
+<td>操作时间</td>
+</tr>
+<tr>
+<td>opType</td>
+<td>操作类型（in：应用启动;end:应用结束;action:自定义事件;page:页面结束;）</td>
+</tr>
+<tr>
+<td>netType</td>
+<td>操作网络类型</td>
+</tr>
+<tr>
+<td>pageName</td>
+<td>操作页面名称（只有类型为page有值）</td>
+</tr>
+<tr>
+<td>eventId</td>
+<td>自定义事件id</td>
+</tr>
+<tr>
+<td>map</td>
+<td>操作附加属性</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>时间间隔（类型为end：应用启动到结束的时长，类型为page：页面启动时长）</td>
+</tr>
+</tbody>
+</table>
+<p>上传的参数为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Param&gt; params;</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-2-参数json实例："><a href="#1-2-参数json实例：" class="headerlink" title="1.2 参数json实例："></a>1.2 参数json实例：</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"datatype"</span>: <span class="string">"11FFE127604782539208DA065113107D"</span>,</span><br><span class="line">        <span class="attr">"os"</span>: <span class="string">"Android 4.4.4"</span>,</span><br><span class="line">        <span class="attr">"pb"</span>: <span class="string">"Wandoujia"</span>,</span><br><span class="line">        <span class="attr">"pushid"</span>: <span class="string">"UISEN127604D802F9208DA065IJ9E7SE"</span>,</span><br><span class="line">        <span class="attr">"session"</span>: &#123;</span><br><span class="line">            <span class="attr">"eventId"</span>: <span class="string">"null"</span>,</span><br><span class="line">            <span class="attr">"interval"</span>: <span class="string">"0"</span>,</span><br><span class="line">            <span class="attr">"map"</span>: &#123;</span><br><span class="line">                <span class="attr">"zhuyan"</span>: <span class="string">"周润发"</span>,</span><br><span class="line">                <span class="attr">"name"</span>: <span class="string">"卧虎藏龙"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"netType"</span>: <span class="string">"WIFI"</span>,</span><br><span class="line">            <span class="attr">"opTime"</span>: <span class="string">"2016-05-23 10:32:53"</span>,</span><br><span class="line">            <span class="attr">"opType"</span>: <span class="string">"action"</span>,</span><br><span class="line">            <span class="attr">"pageName"</span>: <span class="string">"null"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"ua"</span>: <span class="string">"Google Nexus 4 - 4.4.4 - API 19 - 768x1280"</span>,</span><br><span class="line">        <span class="attr">"userkey"</span>: <span class="string">"000000000000000"</span>,</span><br><span class="line">        <span class="attr">"vr"</span>: <span class="string">"1.39"</span></span><br><span class="line">    &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"datatype"</span>: <span class="string">"11FFE127604782539208DA065113107D"</span>,</span><br><span class="line">        <span class="attr">"os"</span>: <span class="string">"Android 4.4.4"</span>,</span><br><span class="line">        <span class="attr">"pb"</span>: <span class="string">"Wandoujia"</span>,</span><br><span class="line">        <span class="attr">"pushid"</span>: <span class="string">"UISEN127604D802F9208DA065IJ9E7SE"</span>,</span><br><span class="line">        <span class="attr">"session"</span>: &#123;</span><br><span class="line">            <span class="attr">"eventId"</span>: <span class="string">"null"</span>,</span><br><span class="line">            <span class="attr">"interval"</span>: <span class="string">"56"</span>,</span><br><span class="line">            <span class="attr">"map"</span>: <span class="literal">null</span>,</span><br><span class="line">            <span class="attr">"netType"</span>: <span class="string">"WIFI"</span>,</span><br><span class="line">            <span class="attr">"opTime"</span>: <span class="string">"2016-05-23 23:03:30"</span>,</span><br><span class="line">            <span class="attr">"opType"</span>: <span class="string">"page"</span>,</span><br><span class="line">            <span class="attr">"pageName"</span>: <span class="string">"com.example.statistics.MainActivity"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"ua"</span>: <span class="string">"Google Nexus 4 - 4.4.4 - API 19 - 768x1280"</span>,</span><br><span class="line">        <span class="attr">"userkey"</span>: <span class="string">"000000000000000"</span>,</span><br><span class="line">        <span class="attr">"vr"</span>: <span class="string">"1.0"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"datatype"</span>: <span class="string">"11FFE127604782539208DA065113107D"</span>,</span><br><span class="line">        <span class="attr">"os"</span>: <span class="string">"Android 4.4.4"</span>,</span><br><span class="line">        <span class="attr">"pb"</span>: <span class="string">"Wandoujia"</span>,</span><br><span class="line">        <span class="attr">"pushid"</span>: <span class="string">"UISEN127604D802F9208DA065IJ9E7SE"</span>,</span><br><span class="line">        <span class="attr">"session"</span>: &#123;</span><br><span class="line">            <span class="attr">"eventId"</span>: <span class="string">"null"</span>,</span><br><span class="line">            <span class="attr">"interval"</span>: <span class="string">"null"</span>,</span><br><span class="line">            <span class="attr">"map"</span>: <span class="literal">null</span>,</span><br><span class="line">            <span class="attr">"netType"</span>: <span class="string">"WIFI"</span>,</span><br><span class="line">            <span class="attr">"opTime"</span>: <span class="string">"2016-05-23 10:09:31"</span>,</span><br><span class="line">            <span class="attr">"opType"</span>: <span class="string">"in"</span>,</span><br><span class="line">            <span class="attr">"pageName"</span>: <span class="string">"null"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"ua"</span>: <span class="string">"Google Nexus 4 - 4.4.4 - API 19 - 768x1280"</span>,</span><br><span class="line">        <span class="attr">"userkey"</span>: <span class="string">"000000000000000"</span>,</span><br><span class="line">        <span class="attr">"vr"</span>: <span class="string">"1.39"</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-接口url"><a href="#1-3-接口url" class="headerlink" title="1.3 接口url"></a>1.3 接口url</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://cjtest.jhddg.com/appsta.js</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-返回值说明"><a href="#1-4-返回值说明" class="headerlink" title="1.4 返回值说明"></a>1.4 返回值说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">返回success请求成功，其他失败</span><br></pre></td></tr></table></figure>
+<h2 id="2-部分实现逻辑说明"><a href="#2-部分实现逻辑说明" class="headerlink" title="2. 部分实现逻辑说明"></a>2. 部分实现逻辑说明</h2><h3 id="2-1-程序首次启动监听"><a href="#2-1-程序首次启动监听" class="headerlink" title="2.1 程序首次启动监听"></a>2.1 程序首次启动监听</h3><p>将JHEventAgent对象使用单例模式，在其获取实例的方法中对实例是否为null进行判断，null则首次启动，不为null则非首次启动。<br>代码实现如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getInstance</span><span class="params">(Context context)</span></span>&#123;</span><br><span class="line">		mContext = context;</span><br><span class="line">		<span class="keyword">if</span>(instance==<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="comment">//首次启动</span></span><br><span class="line">			jhEvent = <span class="keyword">new</span> JHEvent(context);</span><br><span class="line">			instance = <span class="keyword">new</span> JHEventAgent();</span><br><span class="line">			</span><br><span class="line">			submitData(context);<span class="comment">//首次启动提交数据</span></span><br><span class="line">			</span><br><span class="line">			<span class="comment">//============固定时间间隔提交数据============</span></span><br><span class="line">			<span class="keyword">final</span> Handler handler = <span class="keyword">new</span> Handler();</span><br><span class="line">			Runnable runnable = <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">				</span><br><span class="line">				<span class="meta">@Override</span></span><br><span class="line">				<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">					submitData(mContext);</span><br><span class="line">					handler.postDelayed(<span class="keyword">this</span>, <span class="number">10</span> * <span class="number">1000</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			runnable.run();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-2-数据缓存处理"><a href="#2-2-数据缓存处理" class="headerlink" title="2.2 数据缓存处理"></a>2.2 数据缓存处理</h3><p>使用android sqlite数据库创建如下表<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.execSQL(<span class="string">"create table if not exists jh_event "</span></span><br><span class="line">		+<span class="string">"(event_id TEXT,event_info TEXT,PRIMARY KEY(event_id))"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>所有的收集用户行为数据都先保存到jh_event表中<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAppStart</span><span class="params">(Map&lt;String, String&gt; map)</span></span>&#123;</span><br><span class="line">	Param param = getParam();</span><br><span class="line">	Session sesson = param.getSession();</span><br><span class="line">	sesson.setOpType(Session.IN);</span><br><span class="line">	sesson.setMap(map);</span><br><span class="line">	timeMaps.put(<span class="string">"app"</span>, sesson.getOpTime());<span class="comment">//记录应用启动时间</span></span><br><span class="line">	DBOptionFactory.insert(mContext, JSONHelper.toJSON(param));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在数据提交成功之后将表中提交的数据删除<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPostExecute</span><span class="params">(String[] bodys)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(bodys[<span class="number">1</span>].equals(<span class="string">"200"</span>)||bodys[<span class="number">1</span>].equals(<span class="string">"success"</span>.trim().replaceAll(<span class="string">"\n"</span>, <span class="string">""</span>)))&#123;</span><br><span class="line">		DBOptionFactory.delete(context, map);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">super</span>.onPostExecute(bodys);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-3-页面结束时长计算"><a href="#2-3-页面结束时长计算" class="headerlink" title="2.3 页面结束时长计算"></a>2.3 页面结束时长计算</h3><p>创建一个用来保存所有界面启动时间的Map对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; timeMaps = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<p>在页面启动的方法中将启动时间保存到map中，以pagename为键<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">(String pageName)</span></span>&#123;</span><br><span class="line">	timeMaps.put(pageName, Utils.getTime());<span class="comment">//记录页面启动时间</span></span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<p>在页面结束时以当前结束时间和记录到map中的启动时间获取页面停留时长，单位：秒<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPuase</span><span class="params">(String pageName,Map&lt;String, String&gt; map)</span></span>&#123;</span><br><span class="line">		Param param = getParam();</span><br><span class="line">		Session sesson = param.getSession();</span><br><span class="line">		sesson.setPageName(pageName);</span><br><span class="line">		sesson.setOpType(Session.PAGE);</span><br><span class="line">		sesson.setMap(map);</span><br><span class="line">		<span class="keyword">long</span> time = Utils.getDifferenceTime(timeMaps.get(pageName), sesson.getOpTime());</span><br><span class="line">		sesson.setInterval(String.valueOf(time));<span class="comment">//页面停留时间</span></span><br><span class="line">		DBOptionFactory.insert(mContext, JSONHelper.toJSON(param));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-4-应用运行时长计算"><a href="#2-4-应用运行时长计算" class="headerlink" title="2.4 应用运行时长计算"></a>2.4 应用运行时长计算</h3><p>设置一个变量作为应用上次结束时间，初始为0 表示应用未结束<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">long</span> exitTime = <span class="number">0</span>;<span class="comment">//上次退出时间</span></span><br></pre></td></tr></table></figure></p>
+<p>在应用首次启动时插入一条in类型数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAppStart</span><span class="params">(Map&lt;String, String&gt; map)</span></span>&#123;</span><br><span class="line">		Param param = getParam();</span><br><span class="line">		Session sesson = param.getSession();</span><br><span class="line">		sesson.setOpType(Session.IN);</span><br><span class="line">		sesson.setMap(map);</span><br><span class="line">		timeMaps.put(<span class="string">"app"</span>, sesson.getOpTime());<span class="comment">//记录应用启动时间</span></span><br><span class="line">		DBOptionFactory.insert(mContext, JSONHelper.toJSON(param));</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在页面的启动方法中判断本次启动和上次结束的时间差,如果距离上次结束时间大于30秒，插入一条end类型数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">(String pageName)</span></span>&#123;</span><br><span class="line">		timeMaps.put(pageName, Utils.getTime());<span class="comment">//记录页面启动时间</span></span><br><span class="line">		<span class="keyword">if</span>(exitTime!=<span class="number">0</span>&amp;&amp;System.currentTimeMillis()-exitTime&gt;<span class="number">30000</span>)&#123;</span><br><span class="line">			onAppEnd(exitTime);</span><br><span class="line">			onAppStart();</span><br><span class="line">		&#125;</span><br><span class="line">		exitTime = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在页面结束的方法中记录结束时间，并且启动一个计时器，30秒之后，判断程序未启动的话插入一条end数据并将程序设为启动，防止程序再次启动多插入一条end数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPuase</span><span class="params">(String pageName,Map&lt;String, String&gt; map)</span></span>&#123;</span><br><span class="line">		Param param = getParam();</span><br><span class="line">		Session sesson = param.getSession();</span><br><span class="line">		sesson.setPageName(pageName);</span><br><span class="line">		sesson.setOpType(Session.PAGE);</span><br><span class="line">		sesson.setMap(map);</span><br><span class="line">		<span class="keyword">long</span> time = Utils.getDifferenceTime(timeMaps.get(pageName), sesson.getOpTime());</span><br><span class="line">		sesson.setInterval(String.valueOf(time));<span class="comment">//页面停留时间</span></span><br><span class="line">		DBOptionFactory.insert(mContext, JSONHelper.toJSON(param));</span><br><span class="line">		</span><br><span class="line">		exitTime = System.currentTimeMillis();</span><br><span class="line">		<span class="keyword">new</span> ExitTimer(<span class="number">30</span>, <span class="keyword">new</span> ExitTimer.OnExitListener() &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onExit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(exitTime!=<span class="number">0</span>)&#123;</span><br><span class="line">					onAppEnd(exitTime);</span><br><span class="line">					exitTime = <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -427,7 +675,7 @@ var duoshuoQuery = {short_name:"panhongzhi02"};
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-服务参数说明"><span class="nav-number">1.</span> <span class="nav-text">1. 服务参数说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Param类"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Param类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Session类"><span class="nav-number">1.1.1.</span> <span class="nav-text">Session类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-参数json实例："><span class="nav-number">1.2.</span> <span class="nav-text">1.2 参数json实例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-接口url"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 接口url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-返回值说明"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 返回值说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-部分实现逻辑说明"><span class="nav-number">2.</span> <span class="nav-text">2. 部分实现逻辑说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-程序首次启动监听"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 程序首次启动监听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-数据缓存处理"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 数据缓存处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-页面结束时长计算"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 页面结束时长计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-应用运行时长计算"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 应用运行时长计算</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
