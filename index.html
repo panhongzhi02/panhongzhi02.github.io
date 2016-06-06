@@ -434,68 +434,15 @@
 
       
         
-          
-            <h2 id="1-1-Tomcat&#x7B80;&#x4ECB;"><a href="#1-1-Tomcat&#x7B80;&#x4ECB;" class="headerlink" title="1.1 Tomcat&#x7B80;&#x4ECB;"></a>1.1 Tomcat&#x7B80;&#x4ECB;</h2><p>Tomcat&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x653E;&#x6E90;&#x7801;&#x3001;&#x514D;&#x8D39;&#x652F;&#x6301;JSP&#x548C;Servlet&#x6280;&#x672F;&#x5BB9;&#x5668;&#xFF0C;&#x540C;&#x65F6;&#x53C8;&#x662F;&#x4E00;&#x4E2A;Web&#x670D;&#x52A1;&#x5668;&#x8F6F;&#x4EF6;&#xFF0C;Tomcat&#x4E2D;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x4E00;&#x4E2A;WAR&#xFF08;Web Archive&#xFF09;&#x6587;&#x4EF6;&#x3002;Tomcat&#x5373;&#x662F;&#x4E00;&#x4E2A;Servlet&#x5BB9;&#x5668;&#xFF0C;&#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x50CF;IIS&#x3001;Apache&#x7B49;Web&#x670D;&#x52A1;&#x5668;&#x4E00;&#x6837;&#x3002;</p>
+          <h2 id="1-1-Tomcat&#x7B80;&#x4ECB;"><a href="#1-1-Tomcat&#x7B80;&#x4ECB;" class="headerlink" title="1.1 Tomcat&#x7B80;&#x4ECB;"></a>1.1 Tomcat&#x7B80;&#x4ECB;</h2><p>Tomcat&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x653E;&#x6E90;&#x7801;&#x3001;&#x514D;&#x8D39;&#x652F;&#x6301;JSP&#x548C;Servlet&#x6280;&#x672F;&#x5BB9;&#x5668;&#xFF0C;&#x540C;&#x65F6;&#x53C8;&#x662F;&#x4E00;&#x4E2A;Web&#x670D;&#x52A1;&#x5668;&#x8F6F;&#x4EF6;&#xFF0C;Tomcat&#x4E2D;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x4E00;&#x4E2A;WAR&#xFF08;Web Archive&#xFF09;&#x6587;&#x4EF6;&#x3002;Tomcat&#x5373;&#x662F;&#x4E00;&#x4E2A;Servlet&#x5BB9;&#x5668;&#xFF0C;&#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x50CF;IIS&#x3001;Apache&#x7B49;Web&#x670D;&#x52A1;&#x5668;&#x4E00;&#x6837;&#x3002;</p>
 <h2 id="1-2-server-xml&#x6587;&#x4EF6;&#x8BF4;&#x660E;"><a href="#1-2-server-xml&#x6587;&#x4EF6;&#x8BF4;&#x660E;" class="headerlink" title="1.2 server.xml&#x6587;&#x4EF6;&#x8BF4;&#x660E;"></a>1.2 server.xml&#x6587;&#x4EF6;&#x8BF4;&#x660E;</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Server</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Service</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Connector</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Engine</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Host</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Context</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">Context</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">Engine</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Service</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Server</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>&#x4E0A;&#x8FF0;&#x5404;&#x7EC4;&#x4EF6;&#x5C06;Tomcat&#x5206;&#x6210;&#x82E5;&#x5E72;&#x5C42;&#xFF08;Server&#x5C42;&#xFF0C;Service&#x5C42;&#xFF0C;Engine&#x5C42;&#xFF0C;Host&#x5C42;&#x3001;Context&#x5C42;&#xFF09;&#xFF0C;&#x5404;&#x5C42;&#x6570;&#x636E;&#x7BA1;&#x9053;PipeLine&#x4EA4;&#x4E92;&#x3002;</p>
-<h3 id="1-2-1-Server&#x5C42;"><a href="#1-2-1-Server&#x5C42;" class="headerlink" title="1.2.1 Server&#x5C42;"></a>1.2.1 Server&#x5C42;</h3><p>&#x5BF9;&#x5E94;Server&#x7EC4;&#x4EF6;&#xFF0C;&#x903B;&#x8F91;&#x4E0A;&#x8868;&#x793A;&#x6574;&#x4E2A;Tomcat&#xFF0C;&#x5373;&#x6574;&#x4E2A;Catalina Servlet&#x5BB9;&#x5668;&#x3002;&#x5B83;&#x5904;&#x4E8E;Tomcat&#x9876;&#x5C42;&#xFF0C;&#x53EF;&#x4EE5;&#x5305;&#x6DB5;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;Service&#x5C42;&#xFF0C;Tomca&#x63D0;&#x4F9B;&#x4E86;&#x8BE5;&#x5C42;&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x3002;</p>
-<h3 id="1-2-2-Service&#x5C42;"><a href="#1-2-2-Service&#x5C42;" class="headerlink" title="1.2.2 Service&#x5C42;"></a>1.2.2 Service&#x5C42;</h3><p>&#x5BF9;&#x5E94;Service&#x7EC4;&#x4EF6;&#xFF0C;&#x662F;&#x5305;&#x542B;&#x5728;Server&#x5C42;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x529F;&#x80FD;&#x5C42;&#x3002;&#x5B83;&#x5305;&#x542B;&#x4E00;&#x4E2A;Engine&#x5C42;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8FDE;&#x63A5;&#x5668;&#xFF08;Connector&#xFF09;&#x3002;Service&#x7EC4;&#x4EF6;&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;Connector&#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#x5230;Engine&#x5C42;&#x4E0A;&#xFF0C;Connector&#x7EC4;&#x4EF6;&#x4FA6;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x83B7;&#x5F97;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x5C06;&#x8BF7;&#x6C42;&#x4EA4;&#x7ED9;Engine&#x5C42;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x628A;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x53D1;&#x7ED9;&#x7528;&#x6237;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x5B9E;&#x9645;&#x529F;&#x80FD;&#x3002;Tomcat&#x63D0;&#x4F9B;&#x4E86;Service&#x63A5;&#x53E3;&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x5E38;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x6237;&#x5B9A;&#x5236;&#x3002;</p>
-<h3 id="1-2-3-Engine&#x5C42;"><a href="#1-2-3-Engine&#x5C42;" class="headerlink" title="1.2.3 Engine&#x5C42;"></a>1.2.3 Engine&#x5C42;</h3><p>&#x5BF9;&#x5E94;Engine&#x7EC4;&#x4EF6;&#xFF0C;&#x8BE5;&#x5C42;&#x662F;&#x8BF7;&#x6C42;&#x5206;&#x53D1;&#x5904;&#x7406;&#x5C42;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x591A;&#x4E2A;Connector&#x3002;&#x5B83;&#x4ECE;Connector&#x63A5;&#x6536;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x89E3;&#x6790;&#x51FA;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;URL&#xFF0C;&#x6839;&#x636E;&#x8BE5;URL&#x53EF;&#x4EE5;&#x628A;&#x8BF7;&#x6C42;&#x5339;&#x914D;&#x5230;&#x6B63;&#x786E;&#x7684;Host&#x4E0A;&#xFF0C;&#x5F53;Host&#x5904;&#x7406;&#x5B8C;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;Engine&#x5C42;&#x628A;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x9002;&#x5408;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#xFF0C;&#x518D;&#x7531;&#x8FDE;&#x63A5;&#x5668;&#x4F20;&#x8F93;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x8BE5;&#x5C42;&#x7684;&#x63A5;&#x53E3;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x6237;&#x6765;&#x5B9A;&#x5236;&#xFF0C;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;&#x8BE5;&#x63A5;&#x53E3;&#x6765;&#x63D0;&#x4F9B;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5F15;&#x64CE;&#x3002;</p>
-<h3 id="1-2-4-Host&#x5C42;"><a href="#1-2-4-Host&#x5C42;" class="headerlink" title="1.2.4 Host&#x5C42;"></a>1.2.4 Host&#x5C42;</h3><p>&#x5BF9;&#x5E94;Host&#x7EC4;&#x4EF6;&#xFF0C;&#x8BE5;&#x5C42;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#xFF0C;&#x4E00;&#x4E2A;Engine&#x5C42;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;Host&#x5C42;&#xFF0C;&#x6BCF;&#x4E2A;Host&#x5C42;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;Context&#x5C42;&#xFF0C;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;Web&#x5E94;&#x7528;&#x3002;&#x56E0;&#x4E3A;Tomcat&#x7ED9;&#x51FA;&#x7684;Host&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#xFF08;&#x7C7B;StandardHost&#xFF09;&#x63D0;&#x4F9B;&#x4E86;&#x91CD;&#x8981;&#x7684;&#x9644;&#x52A0;&#x529F;&#x80FD;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x6237;&#x901A;&#x5E38;&#x4E0D;&#x9700;&#x8981;&#x5B9A;&#x5236;Host&#x3002;</p>
-<h3 id="1-2-5-Context&#x5C42;"><a href="#1-2-5-Context&#x5C42;" class="headerlink" title="1.2.5 Context&#x5C42;"></a>1.2.5 Context&#x5C42;</h3><p>&#x5BF9;&#x5E94;Context&#x7EC4;&#x4EF6;&#xFF0C;&#x8BE5;&#x5C42;&#x4EE3;&#x8868;&#x67D0;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5B9E;&#x9645;&#x76EE;&#x5F55;&#x6216;&#x4E00;&#x4E2A;WAR&#xFF0C;&#x5373;&#x5355;&#x4E2A;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x8FD0;&#x884C;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x6700;&#x4E3A;&#x9891;&#x7E41;&#x3002;&#x4E00;&#x4E2A;Host&#x5C42;&#x5305;&#x542B;&#x591A;&#x4E2A;Context&#x5C42;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;Context&#x90FD;&#x6709;&#x552F;&#x4E00;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;Host&#x5C42;&#x63A5;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x6839;&#x636E;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;URL&#xFF0C;&#x5C06;&#x8BF7;&#x6C42;&#x5B9A;&#x4F4D;&#x5230;Context&#x5C42;&#x3002;</p>
-<h2 id="1-2-Tomcat&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x53CA;&#x7528;&#x9014;"><a href="#1-2-Tomcat&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x53CA;&#x7528;&#x9014;" class="headerlink" title="1.2 Tomcat&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x53CA;&#x7528;&#x9014;"></a>1.2 Tomcat&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x53CA;&#x7528;&#x9014;</h2><table>
-<thead>
-<tr>
-<th>&#x76EE;&#x5F55;</th>
-<th>&#x7528;&#x9014;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/bin</td>
-<td>&#x5B58;&#x653E;&#x542F;&#x52A8;&#x548C;&#x5173;&#x95ED;Tomcat&#x7684;&#x811A;&#x672C;&#x6587;&#x4EF6;</td>
-</tr>
-<tr>
-<td>/common/lib</td>
-<td>&#x5B58;&#x653E;Tomcat&#x670D;&#x52A1;&#x5668;&#x53CA;&#x6240;&#x6709;Web&#x90FD;&#x53EF;&#x8BBF;&#x95EE;&#x7684;JAR&#x6587;&#x4EF6;</td>
-</tr>
-<tr>
-<td>/conf</td>
-<td>&#x5B58;&#x653E;Tomcat&#x670D;&#x52A1;&#x5668;&#x7684;&#x5404;&#x79CD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;server.xml,web.xml&#x7B49;</td>
-</tr>
-<tr>
-<td>/logs</td>
-<td>&#x5B58;&#x653E;Tomcat&#x7684;&#x65E5;&#x5B50;&#x6587;&#x4EF6;</td>
-</tr>
-<tr>
-<td>/server/lib</td>
-<td>&#x5B58;&#x653E;Tomcat&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;jar&#x6587;&#x4EF6;</td>
-</tr>
-<tr>
-<td>/server/webapps</td>
-<td>&#x5B58;&#x653E;Tomcat&#x81EA;&#x5E26;web&#x5E94;&#x7528;admin&#x548C;manager&#x7528;&#x6765;&#x7BA1;&#x7406;Tomcat&#x7684;Web&#x670D;&#x52A1;</td>
-</tr>
-<tr>
-<td>/shared/lib</td>
-<td>&#x5B58;&#x653E;&#x6240;&#x6709;Web&#x5E94;&#x7528;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;jar&#x6587;&#x4EF6;</td>
-</tr>
-<tr>
-<td>/temp</td>
-<td>&#x5B58;&#x653E;Tomcat&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;</td>
-</tr>
-<tr>
-<td>/webapps</td>
-<td>Web&#x5E94;&#x7528;&#x7684;&#x53D1;&#x5E03;&#x76EE;&#x5F55;&#xFF0C;&#x628A;Web&#x5E94;&#x7528;&#x6587;&#x4EF6;&#x653E;&#x5165;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Tomcat&#x670D;&#x52A1;&#x5668;&#x6765;&#x8BBF;&#x95EE;</td>
-</tr>
-<tr>
-<td>/work</td>
-<td>&#x5B58;&#x653E;jsp&#x7ECF;&#x8FC7;Tomcat&#x7F16;&#x8BD1;&#x540E;&#x751F;&#x6210;&#x7684;Servlet</td>
-</tr>
-</tbody>
-</table>
-<p>##</p>
-
-          
+<h3 id="1-2-1-Server&#x5C42;"><a href="#1-2-1-Server&#x5C42;" class="headerlink" title="1.2.1 Server&#x5C42;"></a>1.2.1 Server&#x5C42;</h3>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/06/Tomcat远程发布应用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
